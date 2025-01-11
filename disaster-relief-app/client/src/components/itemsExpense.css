@@ -1,61 +1,91 @@
-/* ItemsExpense.css */
-div {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
+/* Reset and container styling */
+.items-expense-container {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 40px; /* Add padding for content */
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top */
+    color: #343a40;
 }
 
-h2 {
+/* Heading styling */
+.items-expense-container h2 {
     text-align: center;
-    color: #333;
+    color: #1d3557; /* Match sidebar text color */
     margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-input[type="text"] {
+/* Input fields styling */
+.items-expense-container input[type="text"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    max-width: 400px; /* Keep input fields within a readable width */
+    padding: 12px 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
+    color: #343a40;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button {
+.items-expense-container input[type="text"]:focus {
+    border-color: #457b9d; /* Match button color */
+    box-shadow: 0 0 6px rgba(69, 123, 157, 0.8); /* Focus glow */
+    outline: none;
+}
+
+/* Button styling */
+.items-expense-container button {
     width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    max-width: 400px; /* Match input field width */
+    padding: 12px 20px;
+    background-color: #457b9d; /* Match sidebar button color */
+    color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-button:hover {
-    background-color: #0056b3;
+.items-expense-container button:hover {
+    background-color: #1d3557; /* Match the sidebar background on hover */
+    color: #a8dadc; /* Light teal text on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
 }
 
-button:focus {
+.items-expense-container button:active {
+    background-color: #003049; /* Darker blue for active state */
+    color: #f1faee;
+    transform: translateY(0); /* Reset lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow */
+}
+
+.items-expense-container button:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 8px rgba(69, 123, 157, 0.8); /* Focus glow */
 }
 
-button:active {
-    background-color: #004085;
-}
-
-ul {
+/* List styling */
+.items-expense-container ul {
     list-style-type: none;
     padding: 0;
     margin: 20px 0;
+    width: 100%;
+    max-width: 400px; /* Keep list within readable width */
 }
 
-ul li {
+.items-expense-container ul li {
     padding: 10px;
     background-color: #f4f4f4;
     margin-bottom: 5px;
@@ -63,16 +93,30 @@ ul li {
     border-radius: 4px;
     color: #333;
     font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.2s ease;
 }
 
-h3 {
-    color: #333;
+.items-expense-container ul li:hover {
+    background-color: #f1faee; /* Light blue background */
+    border-color: #457b9d; /* Match input focus color */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Heading for total cost */
+.items-expense-container h3 {
+    color: #1d3557; /* Match sidebar and heading colors */
     margin-top: 20px;
     text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-p {
+/* Error message styling */
+.items-expense-container p {
     color: red;
     text-align: center;
     font-weight: bold;
+    margin-top: 20px;
 }

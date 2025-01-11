@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import itemsData from '../items.json'; // Import the JSON data
-import './itemsExpense.css';
+import './itemsExpense.css'; // Import the scoped styles
 
 const ItemsExpense = () => {
     const [items, setItems] = useState([]);
@@ -9,9 +9,20 @@ const ItemsExpense = () => {
     const [foundItems, setFoundItems] = useState([]);
     const [totalCost, setTotalCost] = useState(0);
 
-    // Load items from JSON file when the component mounts
+    // Load items from JSON file and retrieve persisted data
     useEffect(() => {
         setItems(itemsData);
+
+        // Retrieve found items and total cost from localStorage
+        const savedFoundItems = localStorage.getItem('foundItems');
+        const savedTotalCost = localStorage.getItem('totalCost');
+
+        if (savedFoundItems) {
+            setFoundItems(JSON.parse(savedFoundItems));
+        }
+        if (savedTotalCost) {
+            setTotalCost(parseFloat(savedTotalCost));
+        }
     }, []);
 
     const searchItem = () => {
@@ -20,8 +31,15 @@ const ItemsExpense = () => {
         );
         if (matchedItem) {
             setSearchResult(matchedItem);
-            setFoundItems((prevItems) => [...prevItems, matchedItem]);
-            setTotalCost((prevTotal) => prevTotal + matchedItem.cost);
+            const updatedFoundItems = [...foundItems, matchedItem];
+            const updatedTotalCost = totalCost + matchedItem.cost;
+
+            setFoundItems(updatedFoundItems);
+            setTotalCost(updatedTotalCost);
+
+            // Persist updated data to localStorage
+            localStorage.setItem('foundItems', JSON.stringify(updatedFoundItems));
+            localStorage.setItem('totalCost', updatedTotalCost.toString());
         } else {
             setSearchResult(null);
         }
@@ -29,7 +47,7 @@ const ItemsExpense = () => {
     };
 
     return (
-        <div>
+        <div className="items-expense-container">
             <h2>Household Items Cost Tracker</h2>
             <input
                 type="text"
