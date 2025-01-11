@@ -1,0 +1,291 @@
+[
+  {
+    "name": "Laptop",
+    "cost": 999.99
+  },
+  {
+    "name": "Smartphone",
+    "cost": 699.99
+  },
+  {
+    "name": "Tablet",
+    "cost": 299.99
+  }
+  ,
+    {
+        "name": "Television",
+        "cost": 499.99
+    },
+    {
+        "name": "Refrigerator",
+        "cost": 1199.99
+    },
+    {
+        "name": "Microwave",
+        "cost": 149.99
+    },
+    {
+        "name": "Washing Machine",
+        "cost": 799.99
+    },
+    {
+        "name": "Dryer",
+        "cost": 699.99
+    },
+    {
+        "name": "Dishwasher",
+        "cost": 599.99
+    },
+    {
+        "name": "Blender",
+        "cost": 89.99
+    },
+    {
+        "name": "Toaster",
+        "cost": 29.99
+    },
+    {
+        "name": "Coffee Maker",
+        "cost": 79.99
+    },
+    {
+        "name": "Vacuum Cleaner",
+        "cost": 199.99
+    },
+    {
+        "name": "Air Conditioner",
+        "cost": 399.99
+    },
+    {
+        "name": "Heater",
+        "cost": 99.99
+    },
+    {
+        "name": "Fan",
+        "cost": 49.99
+    },
+    {
+        "name": "Iron",
+        "cost": 39.99
+    },
+    {
+        "name": "Hair Dryer",
+        "cost": 29.99
+    },
+    {
+        "name": "Electric Kettle",
+        "cost": 59.99
+    },
+    {
+        "name": "Rice Cooker",
+        "cost": 79.99
+    },
+    {
+        "name": "Slow Cooker",
+        "cost": 69.99
+    },
+    {
+        "name": "Pressure Cooker",
+        "cost": 99.99
+    },
+    {
+        "name": "Air Fryer",
+        "cost": 129.99
+    },
+    {
+        "name": "Juicer",
+        "cost": 99.99
+    },
+    {
+        "name": "Food Processor",
+        "cost": 149.99
+    },
+    {
+        "name": "Mixer",
+        "cost": 99.99
+    },
+    {
+        "name": "Grill",
+        "cost": 199.99
+    },
+    {
+        "name": "Oven",
+        "cost": 499.99
+    },
+    {
+        "name": "Stove",
+        "cost": 699.99
+    },
+    {
+        "name": "Freezer",
+        "cost": 899.99
+    },
+    {
+        "name": "Water Heater",
+        "cost": 299.99
+    },
+    {
+        "name": "Humidifier",
+        "cost": 79.99
+    },
+    {
+        "name": "Dehumidifier",
+        "cost": 199.99
+    },
+    {
+        "name": "Lamp",
+        "cost": 49.99
+    },
+    {
+        "name": "Ceiling Fan",
+        "cost": 149.99
+    },
+    {
+        "name": "Router",
+        "cost": 129.99
+    },
+    {
+        "name": "Modem",
+        "cost": 99.99
+    },
+    {
+        "name": "Printer",
+        "cost": 199.99
+    },
+    {
+        "name": "Scanner",
+        "cost": 149.99
+    },
+    {
+        "name": "Projector",
+        "cost": 299.99
+    },
+    {
+        "name": "Speaker",
+        "cost": 99.99
+    },
+    {
+        "name": "Soundbar",
+        "cost": 199.99
+    },
+    {
+        "name": "Subwoofer",
+        "cost": 149.99
+    },
+    {
+        "name": "Headphones",
+        "cost": 79.99
+    },
+    {
+        "name": "Earbuds",
+        "cost": 49.99
+    },
+    {
+        "name": "Smartwatch",
+        "cost": 199.99
+    },
+    {
+        "name": "Fitness Tracker",
+        "cost": 99.99
+    },
+    {
+        "name": "Camera",
+        "cost": 499.99
+    },
+    {
+        "name": "Camcorder",
+        "cost": 299.99
+    },
+    {
+        "name": "Tripod",
+        "cost": 49.99
+    },
+    {
+        "name": "Drone",
+        "cost": 799.99
+    },
+    {
+        "name": "Smart Light",
+        "cost": 29.99
+    },
+    {
+        "name": "Smart Plug",
+        "cost": 24.99
+    },
+    {
+        "name": "Smart Thermostat",
+        "cost": 199.99
+    },
+    {
+        "name": "Smart Lock",
+        "cost": 149.99
+    },
+    {
+        "name": "Security Camera",
+        "cost": 99.99
+    },
+    {
+        "name": "Video Doorbell",
+        "cost": 149.99
+    },
+    {
+        "name": "Smoke Detector",
+        "cost": 49.99
+    },
+    {
+        "name": "Carbon Monoxide Detector",
+        "cost": 59.99
+    },
+    {
+        "name": "Fire Extinguisher",
+        "cost": 39.99
+    },
+    {
+        "name": "First Aid Kit",
+        "cost": 29.99
+    },
+    {
+        "name": "Tool Kit",
+        "cost": 49.99
+    },
+    {
+        "name": "Lawn Mower",
+        "cost": 299.99
+    },
+    {
+        "name": "Leaf Blower",
+        "cost": 99.99
+    },
+    {
+        "name": "Weed Trimmer",
+        "cost": 79.99
+    },
+    {
+        "name": "Garden Hose",
+        "cost": 29.99
+    },
+    {
+        "name": "Sprinkler",
+        "cost": 19.99
+    },
+    {
+        "name": "BBQ Grill",
+        "cost": 199.99
+    },
+    {
+        "name": "Patio Heater",
+        "cost": 149.99
+    },
+    {
+        "name": "Outdoor Furniture Set",
+        "cost": 499.99
+    },
+    {
+        "name": "Umbrella",
+        "cost": 29.99
+    },
+    {
+        "name": "Cooler",
+        "cost": 49.99
+    }
+]
