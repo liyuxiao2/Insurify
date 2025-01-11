@@ -1,70 +1,66 @@
-import React, { useState } from 'react';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import './LoginPage.css'; // Optional: Add CSS for styling
+import React from 'react';
+import { initializeApp } from 'firebase/app'; // Import initializeApp from modular SDK
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID',
+  apiKey: "AIzaSyDqsiV5kTzjlFWQujbDGrv4Z7cw20jxqAo",
+  authDomain: "hack-4e8f7.firebaseapp.com",
+  projectId: "hack-4e8f7",
+  storageBucket: "hack-4e8f7.appspot.com",
+  messagingSenderId: "425237262999",
+  appId: "1:425237262999:web:226e2cc8fcf363f489afd2",
+  measurementId: "G-3QN7DXBHPH"
 };
 
-// Initialize Firebase if not already initialized
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider(); // Set up Google Auth Provider
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-  const handleEmailLogin = async () => {
-    try {
-      await firebase.auth().signInWithEmailAndPassword(email, password);
-      alert('Logged in successfully!');
-    } catch (err) {
-      setError(err.message);
-    }
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log('Logged in:', userCredential.user);
+      })
+      .catch((error) => {
+        console.error('Error logging in:', error.message);
+      });
   };
 
-  const handleGoogleLogin = async () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    try {
-      await firebase.auth().signInWithPopup(provider);
-      alert('Logged in with Google!');
-    } catch (err) {
-      setError(err.message);
-    }
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log('Google Login Success:', result.user);
+      })
+      .catch((error) => {
+        console.error('Google Login Error:', error.message);
+      });
   };
 
   return (
-    <div className="login-container">
-      <h1>Login</h1>
-      {error && <p className="error">{error}</p>}
-      <div className="email-login">
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={handleEmailLogin}>Login with Email</button>
-      </div>
-      <hr />
-      <button onClick={handleGoogleLogin} className="google-login">
-        Login with Google
-      </button>
+    <div>
+      <h1>Login Page</h1>
+      <form onSubmit={handleLogin}>
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" name="password" required />
+        </label>
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      <br />
+      <button onClick={handleGoogleLogin}>Login with Google</button>
     </div>
   );
 };
