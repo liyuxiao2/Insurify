@@ -22,7 +22,7 @@ const HomePage = () => {
             <p>This is the homepage content.</p>
         </div>
     );
-};
+}
 
 const DashBoard = () => {
     return (
