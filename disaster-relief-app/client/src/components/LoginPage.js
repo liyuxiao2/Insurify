@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app'; // Import initializeApp from modular SDK
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import './LoginPage.css';
@@ -20,17 +20,32 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider(); // Set up Google Auth Provider
 
 const LoginPage = () => {
+  // Pre-defined values:
+  const user = 'tonysmean@gmail.com';
+  const pwd = 'abc123';
+
+  // State to store error messages
+  const [error, setError] = useState('');
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    if (email !== user || password !== pwd) {
+      setError('The email or password is incorrect.'); // Set error message
+      return;
+    }
+
+    // Proceed with Firebase authentication
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Logged in:', userCredential.user);
+        setError(''); // Clear error message upon successful login
       })
       .catch((error) => {
         console.error('Error logging in:', error.message);
+        setError('The email or password is incorrect.'); // Show error if Firebase authentication fails
       });
   };
 
@@ -38,15 +53,18 @@ const LoginPage = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log('Google Login Success:', result.user);
+        setError(''); // Clear error message upon successful Google login
       })
       .catch((error) => {
         console.error('Google Login Error:', error.message);
+        setError('Failed to log in with Google.'); // Show error for Google login failure
       });
   };
 
   return (
     <div className="login-container">
       <h1>Login</h1>
+      {error && <p className="error-message">{error}</p>} {/* Display error message if it exists */}
       <form onSubmit={handleLogin}>
         <label>
           Email:
