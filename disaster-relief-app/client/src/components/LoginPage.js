@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { initializeApp } from 'firebase/app'; // Import initializeApp from modular SDK
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import './LoginPage.css';
+import { useNavigate } from 'react-router-dom';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -26,26 +27,32 @@ const LoginPage = () => {
 
   // State to store error messages
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-    if (email !== user || password !== pwd) {
-      setError('The email or password is incorrect.'); // Set error message
-      return;
+    
+    if (email === user && password === pwd) {
+        setError(''); // Clear the error message if credentials are correct
+    } else {
+        setError('The email or password is incorrect.'); // Set error message if credentials are wrong
+        return;
     }
 
+    setError(null)
     // Proceed with Firebase authentication
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Logged in:', userCredential.user);
         setError(''); // Clear error message upon successful login
+        navigate('/dashboard');
+        
       })
       .catch((error) => {
         console.error('Error logging in:', error.message);
-        setError('The email or password is incorrect.'); // Show error if Firebase authentication fails
+        
       });
   };
 
