@@ -1,6 +1,7 @@
 import React from 'react';
 import { initializeApp } from 'firebase/app'; // Import initializeApp from modular SDK
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import './LoginPage.css';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -44,22 +45,19 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h1>Login Page</h1>
+    <div className="login-container">
+      <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <label>
           Email:
           <input type="email" name="email" required />
         </label>
-        <br />
         <label>
           Password:
           <input type="password" name="password" required />
         </label>
-        <br />
         <button type="submit">Login</button>
       </form>
-      <br />
       <button onClick={handleGoogleLogin}>Login with Google</button>
     </div>
   );
