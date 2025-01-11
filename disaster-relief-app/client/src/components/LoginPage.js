@@ -21,10 +21,6 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider(); // Set up Google Auth Provider
 
 const LoginPage = () => {
-  // Pre-defined values:
-  const user = 'tonysmean@gmail.com';
-  const pwd = 'abc123';
-
   // State to store error messages
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -33,26 +29,28 @@ const LoginPage = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    
-    if (email === user && password === pwd) {
-        setError(''); // Clear the error message if credentials are correct
-    } else {
-        setError('The email or password is incorrect.'); // Set error message if credentials are wrong
-        return;
-    }
 
-    setError(null)
     // Proceed with Firebase authentication
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Logged in:', userCredential.user);
         setError(''); // Clear error message upon successful login
-        navigate('/dashboard');
-        
+        navigate('/dashboard'); // Redirect to Dashboard
       })
       .catch((error) => {
         console.error('Error logging in:', error.message);
-        
+
+        // Display appropriate error messages
+        switch (error.code) {
+          case 'auth/user-not-found':
+            setError('No user found with this email.');
+            break;
+          case 'auth/wrong-password':
+            setError('Incorrect password.');
+            break;
+          default:
+            setError('Failed to log in. Please try again.');
+        }
       });
   };
 
@@ -61,6 +59,7 @@ const LoginPage = () => {
       .then((result) => {
         console.log('Google Login Success:', result.user);
         setError(''); // Clear error message upon successful Google login
+        navigate('/dashboard'); // Redirect to Dashboard
       })
       .catch((error) => {
         console.error('Google Login Error:', error.message);
