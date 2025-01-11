@@ -1,15 +1,21 @@
 import React from 'react';
-import './App.css';
-// Import your LoginPage component here
-import LoginPage from './components/LoginPage'; // Update the path as per your project structure
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import LoginPage from './components/LoginPage';
+import DashBoard from './components/dashBoard';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      {/* Render the LoginPage component */}
-      <LoginPage />
-    </div>
+    <Router>
+      <nav>
+        <Link to="/">Login</Link>
+        <Link to="/disaster-verification">Disaster Verification</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashBoard />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
