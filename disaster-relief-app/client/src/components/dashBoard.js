@@ -1,16 +1,48 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './dashBoard.css';
 
+
 const Sidebar = () => {
+    const navigate = useNavigate(); // React Router's navigate hook
+    
     return (
         <div className="sidebar">
             <h2>Sidebar</h2>
-            <ul>
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Settings</li>
-                <li>Logout</li>
-            </ul>
+            <ul> 
+                <li>
+                    <button
+                            className="sidebar-button"
+                            onClick={() => navigate('/items-expense')}
+                    >
+                            Home
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            className="sidebar-button"
+                            onClick={() => navigate('/profile')}
+                        >
+                            Profile
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            className="sidebar-button"
+                            onClick={() => navigate('/settings')}
+                        >
+                            Settings
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            className="sidebar-button"
+                            onClick={() => navigate('/logout')}
+                        >
+                            Logout
+                        </button>
+                    </li>
+                </ul>
         </div>
     );
 };
@@ -22,7 +54,7 @@ const HomePage = () => {
             <p>This is the homepage content.</p>
         </div>
     );
-}
+};
 
 const DashBoard = () => {
     return (

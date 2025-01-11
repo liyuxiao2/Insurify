@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import itemsData from '../items.json'; // Import the JSON data
-import './itemsExpense.css';
+import './itemsExpense.css'; // Import the scoped styles
 
 const ItemsExpense = () => {
     const [items, setItems] = useState([]);
@@ -29,7 +29,7 @@ const ItemsExpense = () => {
     };
 
     return (
-        <div>
+        <div className="items-expense-container">
             <h2>Household Items Cost Tracker</h2>
             <input
                 type="text"

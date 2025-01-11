@@ -3,43 +3,53 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-  }
-  
-  .login-container {
+    display: flex; /* Center the container */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for proper centering */
+}
+
+.login-container {
     width: 100%;
     max-width: 400px;
-    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-  }
-  
-  .login-container h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Space elements evenly inside */
+    align-items: center;
+}
+
+.login-container h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
-  }
-  
-  .login-container form {
+}
+
+.login-container form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .login-container label {
+    width: 100%; /* Ensure form elements take full width of the container */
+}
+
+.login-container label {
     margin-bottom: 5px;
     color: #555;
-  }
-  
-  .login-container input[type="email"],
-  .login-container input[type="password"] {
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  
-  .login-container button {
+    font-size: 16px; /* Ensure consistent font size */
+    width: 100%; /* Ensure input fields take full width */
+}
+
+.login-container button {
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -47,31 +57,43 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  .login-container button:hover {
+    font-size: 16px; /* Consistent button text size */
+    width: 100%; /* Full-width button */
+}
+
+.login-container button:hover {
     background-color: #0056b3;
-  }
-  
-  .login-container button:focus {
+}
+
+.login-container button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  .login-container button:active {
+}
+
+.login-container button:active {
     background-color: #004085;
-  }
-  
-  .login-container button:disabled {
+}
+
+.login-container button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
-  }
-  
-  .login-container input[type="email"]:focus,
-  .login-container input[type="password"]:focus {
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Ensure consistent font size */
+    width: 100%; /* Responsive width */
+    max-width: 300px; /* Limit the maximum width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
-  }
-  
-  
+}
