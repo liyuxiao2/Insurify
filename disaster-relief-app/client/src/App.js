@@ -11,13 +11,12 @@ const BackButton = () => {
   const navigate = useNavigate();
   return (
       <button onClick={() => navigate(-1)} style={{ 
-        position: 'relative', // Keeps the button fixed on the screen
-        top: '50px', // Distance from the bottom of the screen
-        left: '20px', // Distance from the left side of the screen
+        position: 'absolute', // Keeps the button fixed on the screen
+        top: '10px', // Distance from the bottom of the screen
+        left: '170px', // Distance from the left side of the screen
         cursor: 'pointer',
         fontSize: '16px',
         border: '2px solid blue',
-        borderRadius: '4px',
         width: '40px',
         height: '40px',
         color: 'blue',
