@@ -1,0 +1,182 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.app {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.app-header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.app-header p {
+  font-size: 1rem;
+  margin: 10px 0 0;
+}
+
+.section {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.detail-box {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+}
+
+.detail-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.detail-item p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.paperclip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.document-box {
+  border: 2px solid #007bff;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.document-box .paperclip {
+  margin-right: 10px;
+}
+
+.upload-section {
+  margin-top: 20px;
+}
+
+.upload-section label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.upload-section input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 50px;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+}
+
+.claim-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input[type="file"] {
+  padding: 0;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
