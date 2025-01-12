@@ -14,7 +14,6 @@ const BackButton = () => {
       style={{
         position: 'absolute', // Keeps the button fixed on the screen
         top: '10px', // Distance from the top of the screen
-        left: '170px', // Distance from the left side of the screen
         cursor: 'pointer',
         fontSize: '16px',
         border: '2px solid blue',
