@@ -1,3 +1,8 @@
+
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import itemsData from '../items.json'; // Import the JSON data
+import './itemsExpense.css'; // Import the scoped styles
 import React, { useState, useEffect } from "react";
 import itemsData from "../items.json"; // Import the JSON data
 import "./itemsExpense.css"; // Import the scoped styles
@@ -8,6 +13,7 @@ const ItemsExpense = () => {
     const [searchResult, setSearchResult] = useState(null);
     const [foundItems, setFoundItems] = useState([]);
     const [totalCost, setTotalCost] = useState(0);
+    const navigate = useNavigate();
     const [suggestions, setSuggestions] = useState([]); // State for suggestions
     const [showForm, setShowForm] = useState(false); // State to show/hide form with animation
     const [formVisible, setFormVisible] = useState(false); // State for animation delay
