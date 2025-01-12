@@ -31,14 +31,6 @@ const Sidebar = () => {
                     <li>
                         <button
                             className="sidebar-button"
-                            onClick={() => navigate('/settings')}
-                        >
-                            Settings
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            className="sidebar-button"
                             onClick={() => navigate('/logout')}
                         >
                             Logout
