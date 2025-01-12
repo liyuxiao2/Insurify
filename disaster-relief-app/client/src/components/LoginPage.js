@@ -36,7 +36,7 @@ const LoginPage = () => {
       return;
     }
 
-    // Proceed with Firebase authentication
+
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Logged in:', userCredential.user);
