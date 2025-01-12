@@ -79,41 +79,59 @@ const Profile = () => {
 
     return (
         <div className="Profile">
-            <h1>Profile Page</h1>
-            <div
-                className="drop-zone"
-                onClick={() => document.getElementById('fileInput').click()} // Trigger file input on click
-                onDrop={handleDrop}
-                onDragOver={handleDragOver}
-            >
-                <p>Click or Drag & Drop files, photos, or folders here</p>
-                <input
-                    id="fileInput"
-                    type="file"
-                    multiple
-                    style={{ display: 'none' }} // Hide the input element
-                    onChange={handleFileSelect}
-                />
+            <div className="document-sidebar">
+                <h2>Suggested Documents</h2>
+                <ul>
+                    <li>Homeowner's Insurance Policy</li>
+                    <li>HO3 Form (standard homeowner insurance policy)</li>
+                    <li>Policy Declarations Page</li>
+                    <li>Fire-Specific Insurance Riders (if applicable)</li>
+                    <li>Full Insurance Policy Document (if needed for confirmation)</li>
+                    <li>Proof of Loss Form</li>
+                    <li>Completed and signed form provided by your insurance company</li>
+                    <li>Photos of damaged or lost property</li>
+                    <li>Receipts or purchase records for high-value items</li>
+                    <li>Inventory of lost or damaged items</li>
+                    <li>Additional supporting evidence (e.g., repair estimates, appraisals)</li>
+                </ul>
             </div>
-            <button className="clear-button" onClick={handleClearStorage}>
-                Clear All Stored Files
-            </button>
-            <div className="file-list">
-                {files.length > 0 ? (
-                    files.map((file, index) => (
-                        <div className="file-list-item" key={index}>
-                            {file.type.startsWith('image/') ? (
-                                <img src={file.content} alt={file.name} />
-                            ) : (
-                                <p>[File]</p>
-                            )}
-                            <p>{file.name}</p>
-                            <p>{(file.size / 1024).toFixed(2)} KB</p>
-                        </div>
-                    ))
-                ) : (
-                    <p>No files uploaded yet.</p>
-                )}
+            <div className="main-content">
+                <h1>File Uploader Page</h1>
+                <div
+                    className="drop-zone"
+                    onClick={() => document.getElementById('fileInput').click()} // Trigger file input on click
+                    onDrop={handleDrop}
+                    onDragOver={handleDragOver}
+                >
+                    <p>Click or Drag & Drop files, photos, or folders here</p>
+                    <input
+                        id="fileInput"
+                        type="file"
+                        multiple
+                        style={{ display: 'none' }} // Hide the input element
+                        onChange={handleFileSelect}
+                    />
+                </div>
+                <button className="clear-button" onClick={handleClearStorage}>
+                    Clear All Stored Files
+                </button>
+                <div className="file-list">
+                    {files.length > 0 ? (
+                        files.map((file, index) => (
+                            <div className="file-list-item" key={index}>
+                                {file.type.startsWith('image/') ? (
+                                    <img src={file.content} alt={file.name} />
+                                ) : (
+                                    <p>[File]</p>
+                                )}
+                                <p>{file.name}</p>
+                                <p>{(file.size / 1024).toFixed(2)} KB</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No files uploaded yet.</p>
+                    )}
+                </div>
             </div>
         </div>
     );
