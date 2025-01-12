@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { initializeApp } from 'firebase/app'; // Import initializeApp from modular SDK
+import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
 
-// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDqsiV5kTzjlFWQujbDGrv4Z7cw20jxqAo",
   authDomain: "hack-4e8f7.firebaseapp.com",
@@ -15,7 +14,6 @@ const firebaseConfig = {
   measurementId: "G-3QN7DXBHPH"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
