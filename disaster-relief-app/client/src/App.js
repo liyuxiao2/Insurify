@@ -31,15 +31,20 @@ const BackButton = () => {
 const App = () => {
   return (
     <div>
+
       <BackButton />
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/items-expense" element={<ItemsExpense />} />
+
         <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
       </div>
+      </Routes>
+    </div>
+
   );
 };
 
