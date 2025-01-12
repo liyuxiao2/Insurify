@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import ChatBot from './chatbot.js';
 import './dashBoard.css';
 
 
@@ -44,8 +45,10 @@ const Sidebar = () => {
 const HomePage = () => {
     return (
         <div className="homepage">
-            <h1>Welcome to the Dashboard</h1>
-            <p>This is the homepage content.</p>
+            <div className="homepage-header">
+                <h3> Insurance Claim Helper </h3>
+            </div>
+            <ChatBot />
         </div>
     );
 };
@@ -54,7 +57,7 @@ const DashBoard = () => {
     return (
         <div className="dashboard">
             <Sidebar />
-            <HomePage />
+            <HomePage/>
         </div>
     );
 };
