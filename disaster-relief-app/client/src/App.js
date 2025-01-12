@@ -11,41 +11,44 @@ const BackButton = () => {
   const navigate = useNavigate();
   return (
       <button onClick={() => navigate(-1)} style={{ 
-        margin: '0px',
-        position: 'fixed',
-        top: 7,
-        left: 170,
+        position: 'relative', // Keeps the button fixed on the screen
+        top: '50px', // Distance from the bottom of the screen
+        left: '20px', // Distance from the left side of the screen
         cursor: 'pointer',
-        fontSize: '50px',
-        border: 'none',
-        padding: 0,
-        color:'blue',
-        background:'transparent',
-        outline:'none',
+        fontSize: '16px',
+        border: '2px solid blue',
+        borderRadius: '4px',
+        width: '40px',
+        height: '40px',
+        color: 'blue',
+        backgroundColor: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)', // Adds subtle shadow
+        outline: 'none',
+        zIndex: 1000, // Ensures it stays on top of other elements
         }}>
-        ← 
+        ←
       </button>
   );
 }
 
+
 const App = () => {
   return (
-    <div>
-
+    <div style={{ height: '100vh', margin: 0, padding: 0, display: 'flex', flexDirection: 'column' }}>
       <BackButton />
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/items-expense" element={<ItemsExpense />} />
-
         <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
-      </div>
-      </Routes>
     </div>
-
   );
 };
+
 
 export default App;

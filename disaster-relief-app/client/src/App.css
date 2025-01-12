@@ -1,11 +1,14 @@
-.App {
-  text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevents unnecessary scrolling */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  height: 100%;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -26,6 +29,20 @@
 
 .App-link {
   color: #61dafb;
+}
+
+/* Back button styles */
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: blue;
+  cursor: pointer;
+  outline: none;
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 @keyframes App-logo-spin {
