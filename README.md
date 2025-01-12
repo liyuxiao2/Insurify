@@ -1,7 +1,7 @@
 
 </head>
 <body>
-    <h1>Disaster Relief Chatbot</h1>
+    <h1>Insurify</h1>
     <p>An AI-powered chatbot designed to provide assistance during disaster scenarios. This project leverages <strong>Google Gemini's Generative Language API</strong> to respond dynamically to user queries.</p>
 
   <h2>Features</h2>
