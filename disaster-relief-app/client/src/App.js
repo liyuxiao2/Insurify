@@ -7,7 +7,11 @@ import ItemsExpense from './components/itemsExpense';
 const App = () => {
   return (
     <div>
-      <LoginPage />
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/items-expense" element={<ItemsExpense />} />
+      </Routes>
     </div>
   );
 };

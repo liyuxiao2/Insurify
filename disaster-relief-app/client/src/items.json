@@ -1,291 +1,451 @@
 [
-  {
-    "name": "Laptop",
-    "cost": 999.99
-  },
-  {
-    "name": "Smartphone",
-    "cost": 699.99
-  },
-  {
-    "name": "Tablet",
-    "cost": 299.99
-  }
-  ,
     {
-        "name": "Television",
-        "cost": 499.99
+      "name": "Apple MacBook Pro",
+      "cost": 1299.99
     },
     {
-        "name": "Refrigerator",
-        "cost": 1199.99
+      "name": "Dell XPS 13",
+      "cost": 999.99
     },
     {
-        "name": "Microwave",
+      "name": "Sony Bravia 4K TV",
+      "cost": 1499.99
+    },
+    {
+      "name": "Samsung Galaxy S21 Ultra",
+      "cost": 1199.99
+    },
+    {
+      "name": "Apple iPad Air",
+      "cost": 599.99
+    },
+    {
+      "name": "Bose Noise Cancelling Headphones 700",
+      "cost": 379.99
+    },
+    {
+      "name": "Dyson V11 Cordless Vacuum",
+      "cost": 699.99
+    },
+    {
+      "name": "Sony WH-1000XM5 Headphones",
+      "cost": 399.99
+    },
+    {
+      "name": "KitchenAid Artisan Stand Mixer",
+      "cost": 449.99
+    },
+    {
+      "name": "Instant Pot Duo 7-in-1",
+      "cost": 129.99
+    },
+    {
+      "name": "GoPro HERO11 Black",
+      "cost": 499.99
+    },
+    {
+      "name": "Microsoft Surface Laptop 5",
+      "cost": 1199.99
+    },
+    {
+      "name": "Apple Watch Series 8",
+      "cost": 399.99
+    },
+    {
+      "name": "Google Nest Thermostat",
+      "cost": 199.99
+    },
+    {
+      "name": "Amazon Echo Dot",
+      "cost": 49.99
+    },
+    {
+      "name": "Samsung Galaxy Tab S8",
+      "cost": 799.99
+    },
+    {
+      "name": "Sony Alpha a7 III Camera",
+      "cost": 1999.99
+    },
+    {
+      "name": "Ninja Air Fryer",
+      "cost": 159.99
+    },
+    {
+      "name": "LG UltraGear Gaming Monitor",
+      "cost": 499.99
+    },
+    {
+      "name": "Corsair K95 RGB Mechanical Keyboard",
+      "cost": 199.99
+    },
+    {
+      "name": "Logitech MX Master 3S Mouse",
+      "cost": 99.99
+    },
+    {
+      "name": "Canon EOS Rebel T7 DSLR Camera",
+      "cost": 449.99
+    },
+    {
+      "name": "Asus ROG Strix Gaming Laptop",
+      "cost": 1599.99
+    },
+    {
+      "name": "Apple AirPods Pro (2nd Generation)",
+      "cost": 249.99
+    },
+    {
+        "name": "Fitbit Charge 5",
         "cost": 149.99
     },
     {
-        "name": "Washing Machine",
-        "cost": 799.99
+        "name": "Roku Streaming Stick 4K",
+        "cost": 49.99
     },
     {
-        "name": "Dryer",
-        "cost": 699.99
-    },
-    {
-        "name": "Dishwasher",
-        "cost": 599.99
-    },
-    {
-        "name": "Blender",
-        "cost": 89.99
-    },
-    {
-        "name": "Toaster",
+        "name": "Anker PowerCore 10000",
         "cost": 29.99
     },
     {
-        "name": "Coffee Maker",
-        "cost": 79.99
-    },
-    {
-        "name": "Vacuum Cleaner",
-        "cost": 199.99
-    },
-    {
-        "name": "Air Conditioner",
-        "cost": 399.99
-    },
-    {
-        "name": "Heater",
-        "cost": 99.99
-    },
-    {
-        "name": "Fan",
-        "cost": 49.99
-    },
-    {
-        "name": "Iron",
-        "cost": 39.99
-    },
-    {
-        "name": "Hair Dryer",
-        "cost": 29.99
-    },
-    {
-        "name": "Electric Kettle",
-        "cost": 59.99
-    },
-    {
-        "name": "Rice Cooker",
-        "cost": 79.99
-    },
-    {
-        "name": "Slow Cooker",
-        "cost": 69.99
-    },
-    {
-        "name": "Pressure Cooker",
-        "cost": 99.99
-    },
-    {
-        "name": "Air Fryer",
-        "cost": 129.99
-    },
-    {
-        "name": "Juicer",
-        "cost": 99.99
-    },
-    {
-        "name": "Food Processor",
-        "cost": 149.99
-    },
-    {
-        "name": "Mixer",
-        "cost": 99.99
-    },
-    {
-        "name": "Grill",
-        "cost": 199.99
-    },
-    {
-        "name": "Oven",
-        "cost": 499.99
-    },
-    {
-        "name": "Stove",
-        "cost": 699.99
-    },
-    {
-        "name": "Freezer",
-        "cost": 899.99
-    },
-    {
-        "name": "Water Heater",
-        "cost": 299.99
-    },
-    {
-        "name": "Humidifier",
-        "cost": 79.99
-    },
-    {
-        "name": "Dehumidifier",
-        "cost": 199.99
-    },
-    {
-        "name": "Lamp",
-        "cost": 49.99
-    },
-    {
-        "name": "Ceiling Fan",
-        "cost": 149.99
-    },
-    {
-        "name": "Router",
-        "cost": 129.99
-    },
-    {
-        "name": "Modem",
-        "cost": 99.99
-    },
-    {
-        "name": "Printer",
-        "cost": 199.99
-    },
-    {
-        "name": "Scanner",
-        "cost": 149.99
-    },
-    {
-        "name": "Projector",
-        "cost": 299.99
-    },
-    {
-        "name": "Speaker",
-        "cost": 99.99
-    },
-    {
-        "name": "Soundbar",
-        "cost": 199.99
-    },
-    {
-        "name": "Subwoofer",
-        "cost": 149.99
-    },
-    {
-        "name": "Headphones",
-        "cost": 79.99
-    },
-    {
-        "name": "Earbuds",
-        "cost": 49.99
-    },
-    {
-        "name": "Smartwatch",
-        "cost": 199.99
-    },
-    {
-        "name": "Fitness Tracker",
-        "cost": 99.99
-    },
-    {
-        "name": "Camera",
-        "cost": 499.99
-    },
-    {
-        "name": "Camcorder",
-        "cost": 299.99
-    },
-    {
-        "name": "Tripod",
-        "cost": 49.99
-    },
-    {
-        "name": "Drone",
-        "cost": 799.99
-    },
-    {
-        "name": "Smart Light",
-        "cost": 29.99
-    },
-    {
-        "name": "Smart Plug",
+        "name": "Tile Mate (2022)",
         "cost": 24.99
     },
     {
-        "name": "Smart Thermostat",
+        "name": "Ring Video Doorbell 4",
         "cost": 199.99
     },
     {
-        "name": "Smart Lock",
-        "cost": 149.99
+        "name": "Philips Hue White and Color Ambiance Starter Kit",
+        "cost": 179.99
     },
     {
-        "name": "Security Camera",
-        "cost": 99.99
+        "name": "Nest Cam (Battery)",
+        "cost": 179.99
     },
     {
-        "name": "Video Doorbell",
-        "cost": 149.99
+        "name": "Sonos One (Gen 2)",
+        "cost": 219.99
     },
     {
-        "name": "Smoke Detector",
-        "cost": 49.99
-    },
-    {
-        "name": "Carbon Monoxide Detector",
-        "cost": 59.99
-    },
-    {
-        "name": "Fire Extinguisher",
-        "cost": 39.99
-    },
-    {
-        "name": "First Aid Kit",
-        "cost": 29.99
-    },
-    {
-        "name": "Tool Kit",
-        "cost": 49.99
-    },
-    {
-        "name": "Lawn Mower",
+        "name": "Oculus Quest 2",
         "cost": 299.99
     },
     {
-        "name": "Leaf Blower",
-        "cost": 99.99
+        "name": "DJI Mavic Air 2",
+        "cost": 799.99
     },
     {
-        "name": "Weed Trimmer",
-        "cost": 79.99
+        "name": "Garmin Forerunner 945",
+        "cost": 599.99
     },
     {
-        "name": "Garden Hose",
-        "cost": 29.99
+        "name": "Theragun Elite",
+        "cost": 399.99
     },
     {
-        "name": "Sprinkler",
-        "cost": 19.99
+        "name": "Jabra Elite 85t",
+        "cost": 229.99
     },
     {
-        "name": "BBQ Grill",
-        "cost": 199.99
+        "name": "Nintendo Switch",
+        "cost": 299.99
     },
     {
-        "name": "Patio Heater",
-        "cost": 149.99
-    },
-    {
-        "name": "Outdoor Furniture Set",
+        "name": "PlayStation 5",
         "cost": 499.99
     },
     {
-        "name": "Umbrella",
+        "name": "Xbox Series X",
+        "cost": 499.99
+    },
+    {
+        "name": "Apple TV 4K",
+        "cost": 179.99
+    },
+    {
+        "name": "Samsung Galaxy Watch 4",
+        "cost": 249.99
+    },
+    {
+        "name": "HP Envy 6055e All-in-One Printer",
+        "cost": 129.99
+    },
+    {
+        "name": "Brother HL-L2350DW Monochrome Laser Printer",
+        "cost": 119.99
+    },
+    {
+        "name": "Canon PIXMA TR4520 Wireless All in One Photo Printer",
+        "cost": 99.99
+    },
+    {
+        "name": "Epson EcoTank ET-2720 Wireless Color All-in-One Supertank Printer",
+        "cost": 199.99
+    },
+    {
+        "name": "Razer DeathAdder V2 Gaming Mouse",
+        "cost": 69.99
+    },
+    {
+        "name": "SteelSeries Apex Pro Mechanical Gaming Keyboard",
+        "cost": 199.99
+    },
+    {
+        "name": "HyperX Cloud II Gaming Headset",
+        "cost": 99.99
+    },
+    {
+        "name": "Logitech G502 HERO High Performance Gaming Mouse",
+        "cost": 49.99
+    },
+    {
+        "name": "Corsair Vengeance RGB Pro 16GB (2x8GB) DDR4 3200MHz C16 LED Desktop Memory",
+        "cost": 89.99
+    },
+    {
+        "name": "Samsung 970 EVO Plus SSD 1TB",
+        "cost": 169.99
+    },
+    {
+        "name": "WD Black 5TB P10 Game Drive Portable External Hard Drive",
+        "cost": 149.99
+    },
+    {
+        "name": "Seagate Portable 2TB External Hard Drive",
+        "cost": 59.99
+    },
+    {
+        "name": "SanDisk 128GB Extreme microSDXC UHS-I Memory Card",
         "cost": 29.99
     },
     {
-        "name": "Cooler",
-        "cost": 49.99
+        "name": "Kingston 240GB A400 SATA 3 2.5” Internal SSD",
+        "cost": 29.99
+    },
+    {
+        "name": "Crucial MX500 1TB 3D NAND SATA 2.5 Inch Internal SSD",
+        "cost": 99.99
+    },
+    {
+        "name": "Intel Core i9-11900K Desktop Processor",
+        "cost": 539.99
+    },
+    {
+        "name": "AMD Ryzen 9 5900X 12-core, 24-Thread Unlocked Desktop Processor",
+        "cost": 549.99
+    },
+    {
+        "name": "MSI GeForce RTX 3080 Gaming X Trio 10G Graphics Card",
+        "cost": 799.99
+    },
+    {
+        "name": "ASUS ROG Strix Z590-E Gaming WiFi 6E LGA 1200 ATX Motherboard",
+        "cost": 379.99
+    },
+    {
+        "name": "Gigabyte AORUS NVMe Gen4 SSD 1TB",
+        "cost": 199.99
+    },
+    {
+        "name": "Cooler Master MasterLiquid ML240L RGB V2",
+        "cost": 79.99
+    },
+    {
+        "name": "NZXT H510 - CA-H510B-B1 - Compact ATX Mid-Tower PC Gaming Case",
+        "cost": 69.99
+    },
+    {
+        "name": "Corsair RM850x, 850 Watt, 80+ Gold Certified, Fully Modular Power Supply",
+        "cost": 129.99
+    },
+    {
+        "name": "EVGA SuperNOVA 750 G5, 80 Plus Gold 750W, Fully Modular Power Supply",
+        "cost": 129.99
+    },
+    {
+        "name": "Thermaltake Toughpower GF1 850W 80+ Gold SLI/CrossFire Ready Continuous Power ATX 12V",
+        "cost": 139.99
+    },
+    {
+        "name": "ASUS TUF Gaming VG27AQ 27” G-SYNC Gaming Monitor",
+        "cost": 429.99
+    },
+    {
+        "name": "Acer Predator XB271HU bmiprz 27-inch WQHD (2560x1440) NVIDIA G-SYNC IPS Display",
+        "cost": 499.99
+    },
+    {
+        "name": "BenQ ZOWIE XL2546K 24.5 Inch 240Hz Gaming Monitor",
+        "cost": 499.99
+    },
+    {
+        "name": "Alienware AW3420DW Curved 34 Inch WQHD 3440x1440 120Hz Monitor",
+        "cost": 1199.99
+    },
+    {
+        "name": "LG 27GL83A-B 27 Inch Ultragear QHD IPS 1ms NVIDIA G-SYNC Compatible Gaming Monitor",
+        "cost": 379.99
+    },
+    {
+        "name": "ViewSonic Elite XG270QG 27 Inch 1440p 1ms 165Hz Gaming Monitor",
+        "cost": 599.99
+    },
+    {
+        "name": "Dell UltraSharp U2720Q 27 Inch 4K UHD Monitor",
+        "cost": 539.99
+    },
+    {
+        "name": "Samsung Odyssey G7 32-Inch Curved Gaming Monitor",
+        "cost": 799.99
+    },
+    {
+        "name": "AOC CQ32G1 31.5” Curved Frameless Gaming Monitor",
+        "cost": 299.99
+    },
+    {
+        "name": "MSI Optix MAG272CQR 27” Curved Gaming Monitor",
+        "cost": 349.99
+    },
+    {
+        "name": "Gigabyte G32QC 32” 165Hz 1440P Curved Gaming Monitor",
+        "cost": 349.99
+    },
+    {
+        "name": "Philips 276E8VJSB 27” Monitor, 4K UHD",
+        "cost": 299.99
+    },
+    {
+        "name": "HP 24mh FHD Monitor",
+        "cost": 149.99
+    },
+    {
+        "name": "ASUS VG278QR 27” Gaming Monitor",
+        "cost": 299.99
+    },
+    {
+        "name": "Acer Nitro XV272U Pbmiiprzx 27” WQHD (2560 x 1440) IPS Monitor",
+        "cost": 329.99
+    },
+    {
+        "name": "Samsung LC27F398FWNXZA Samsung C27F398 27 Inch Curved LED Monitor",
+        "cost": 199.99
+    },
+    {
+        "name": "LG 32QN600-B 32-Inch QHD (2560 x 1440) IPS Monitor",
+        "cost": 299.99
+    },
+    {
+        "name": "Dell S2721QS 27 Inch 4K UHD (3840 x 2160) IPS Ultra-Thin Bezel Monitor",
+        "cost": 349.99
+    },
+    {
+        "name": "BenQ PD2700U 27 inch 4K Monitor",
+        "cost": 499.99
+    },
+    {
+        "name": "ViewSonic VX3276-4K-MHD 32 Inch 4K UHD Monitor",
+        "cost": 379.99
+    },
+    {
+        "name": "Acer SB220QC bi 21.5 Inches Full HD (1920 x 1080) IPS Ultra-Thin Monitor",
+        "cost": 89.99
+    },
+    {
+        "name": "ASUS TUF Gaming VG289Q 28” HDR Gaming Monitor",
+        "cost": 329.99
+    },
+    {
+        "name": "LG 27UK850-W 27\" 4K UHD IPS Monitor",
+        "cost": 499.99
+    },
+    {
+        "name": "Dell P2419H 24 Inch LED-Backlit LCD Monitor",
+        "cost": 199.99
+    },
+    {
+        "name": "Samsung Business CH890 Series 34 inch WQHD 3440x1440 Ultrawide Curved Desktop Monitor",
+        "cost": 699.99
+    },
+    {
+        "name": "AOC C24G1 24\" Curved Frameless Gaming Monitor",
+        "cost": 179.99
+    },
+    {
+        "name": "MSI Full HD Non-Glare 1ms 2560 x 1440 165Hz Refresh Rate 27” Curved Gaming Monitor",
+        "cost": 349.99
+    },
+    {
+        "name": "Gigabyte G27Q 27” 144Hz 1440P Gaming Monitor",
+        "cost": 329.99
+    },
+    {
+        "name": "Philips 328E1CA 32\" Curved Monitor, 4K UHD",
+        "cost": 349.99
+    },
+    {
+        "name": "HP VH240a 23.8-Inch Full HD 1080p IPS LED Monitor",
+        "cost": 159.99
+    },
+    {
+        "name": "ASUS ProArt Display PA278QV 27” WQHD (2560 x 1440) Monitor",
+        "cost": 349.99
+    },
+    {
+        "name": "Acer Predator XB273K Gpbmiipprzx 27\" UHD (3840 x 2160) IPS Monitor",
+        "cost": 899.99
+    },
+    {
+        "name": "Samsung 32-Inch UJ59 UHD 4K Monitor",
+        "cost": 349.99
+    },
+    {
+        "name": "LG 34WN80C-B UltraWide Monitor 34” 21:9 Curved WQHD",
+        "cost": 699.99
+    },
+    {
+        "name": "Dell UltraSharp U3415W 34-Inch Curved LED-Lit Monitor",
+        "cost": 799.99
+    },
+    {
+        "name": "BenQ EX3501R 35\" 21:9 Ultrawide Curved QHD Monitor",
+        "cost": 799.99
+    },
+    {
+        "name": "ViewSonic VX3211-4K-MHD 32 Inch 4K UHD Monitor",
+        "cost": 399.99
+    },
+    {
+        "name": "Sceptre 30-inch Curved Gaming Monitor",
+        "cost": 279.99
+    },
+    {
+        "name": "Acer R240HY bidx 23.8-Inch IPS HDMI DVI VGA Monitor",
+        "cost": 129.99
+    },
+    {
+        "name": "ASUS VG248QG 24” G-SYNC Gaming Monitor",
+        "cost": 249.99
+    },
+    {
+        "name": "LG 27GL83A-B 27 Inch Ultragear QHD IPS 1ms NVIDIA G-SYNC Compatible Gaming Monitor",
+        "cost": 379.99
+    },
+    {
+        "name": "Dell S3221QS 32 Inch Curved 4K UHD Monitor",
+        "cost": 499.99
+    },
+    {
+        "name": "BenQ PD3200U 32 inch 4K Monitor",
+        "cost": 799.99
+    },
+    {
+        "name": "ViewSonic VX3276-4K-MHD 32 Inch 4K UHD Monitor",
+        "cost": 379.99
+    },
+    {
+        "name": "Sceptre 24\" Curved 75Hz Gaming LED Monitor",
+        "cost": 129.99
     }
+
 ]
