@@ -1,0 +1,6 @@
+boto3
+openai
+pdfplumber
+python-dotenv
+Flask
+botocore
