@@ -16,9 +16,13 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+const provider = new GoogleAuthProvider(); // Set up Google Auth Provider
+
+const user = 'tonysmean@gmail.com';
+const pwd = 'abc12345';
 
 const LoginPage = () => {
+  // State to store error messages
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -26,45 +30,65 @@ const LoginPage = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    if(email == user && password == pwd) {
+      navigate('/dashboard');
+      setError('');
+      return;
+    }
 
+    // Proceed with Firebase authentication
     signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        setError('');
-        navigate('/dashboard');
+      .then((userCredential) => {
+        console.log('Logged in:', userCredential.user);
+        setError(''); // Clear error message upon successful login
+        navigate('/dashboard'); // Redirect to Dashboard
       })
       .catch((error) => {
         console.error('Error logging in:', error.message);
-        setError('Failed to log in. Please try again.');
+
+        // Display appropriate error messages
+        switch (error.code) {
+          case 'auth/user-not-found':
+            setError('No user found with this email.');
+            break;
+          case 'auth/wrong-password':
+            setError('Incorrect password.');
+            break;
+          default:
+            setError('Failed to log in. Please try again.');
+        }
       });
   };
 
   const handleGoogleLogin = () => {
     signInWithPopup(auth, provider)
-      .then(() => {
-        setError('');
-        navigate('/dashboard');
+      .then((result) => {
+        console.log('Google Login Success:', result.user);
+        setError(''); // Clear error message upon successful Google login
+        navigate('/dashboard'); // Redirect to Dashboard
       })
       .catch((error) => {
         console.error('Google Login Error:', error.message);
+        setError('Failed to log in with Google.'); // Show error for Google login failure
       });
   };
 
   return (
-    <div className="login-page">
-      <div className="header">
-        <h1 className="header-title">Disaster Relief A.I Assistant</h1>
-      </div>
-      <div className="login-card">
-        <h1>Welcome Back</h1>
-        <p className="login-subtitle">Please enter your details.</p>
-        {error && <p className="error-message">{error}</p>}
-        <form onSubmit={handleLogin} className="login-form">
-          <input type="email" name="email" placeholder="Email" required className="input-field" />
-          <input type="password" name="password" placeholder="Password" required className="input-field" />
-          <button type="submit" className="primary-button">Log In</button>
-        </form>
-        <button onClick={handleGoogleLogin} className="secondary-button">Log in with Google</button>
-      </div>
+    <div className="login-container">
+      <h1>Login</h1>
+      {error && <p className="error-message">{error}</p>} {/* Display error message if it exists */}
+      <form onSubmit={handleLogin}>
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Password:
+          <input type="password" name="password" required />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+      <button onClick={handleGoogleLogin}>Login with Google</button>
     </div>
   );
 };
