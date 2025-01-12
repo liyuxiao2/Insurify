@@ -11,7 +11,7 @@ const Sidebar = () => {
     
     return (
         <div className="sidebar">
-            <h2>Sidebar</h2>
+            <h2>Insurify</h2>
             <ul> 
                 <li>
                     <button
