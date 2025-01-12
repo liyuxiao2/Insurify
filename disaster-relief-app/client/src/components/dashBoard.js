@@ -1,10 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './dashBoard.css';
 
 
 const Sidebar = () => {
     const navigate = useNavigate(); // React Router's navigate hook
+    const location = useLocation(); // React Router's location hook
+    
     
     return (
         <div className="sidebar">

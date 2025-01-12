@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import itemsData from '../items.json'; // Import the JSON data
 import './itemsExpense.css'; // Import the scoped styles
 
@@ -8,6 +9,7 @@ const ItemsExpense = () => {
     const [searchResult, setSearchResult] = useState(null);
     const [foundItems, setFoundItems] = useState([]);
     const [totalCost, setTotalCost] = useState(0);
+    const navigate = useNavigate();
 
     // Load items from JSON file and retrieve persisted data
     useEffect(() => {
