@@ -15,7 +15,7 @@
   <h2>Getting Started</h2>
     <h3>Prerequisites</h3>
     <ul>
-        <li>A <strong>Google Cloud API Key</strong> with access to the <em>Generative Language API</em>.</li>
+        <li>An <strong>OpenAI API Key</strong> with access to the <em>Generative Language API</em>.</li>
     </ul>
 
   <h3>Steps to Use</h3>
@@ -45,8 +45,8 @@ index.html  # The main HTML file containing the chatbot
   <h2>Technologies Used</h2>
     <ul>
         <li><strong>Frontend</strong>: HTML, CSS, React.Js</li>
-        <li><strong>BackEnd</strong>: Flask, AWS</li>
-        <li><strong>API</strong>: Google Gemini Generative Language API</li>
+        <li><strong>BackEnd</strong>: Flask, AWS </li>
+        <li><strong>API</strong>: OpenAI API</li>
     </ul>
 
   <h2>License</h2>
