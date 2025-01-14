@@ -2,7 +2,7 @@
 </head>
 <body>
     <h1>Insurify</h1>
-    <p>An AI-powered chatbot designed to assist in disaster scenarios. This project leverages <strong>Open AI's Generative Language API</strong> to assist users through the insurance claims process.</p>
+    <p>An AI-powered chatbot designed to assist in disaster scenarios. This project leverages <strong>Google Gemini's Generative Language API</strong> to assist users through the insurance claims process.</p>
 
   <h2>Features</h2>
     <ul>
@@ -15,7 +15,7 @@
   <h2>Getting Started</h2>
     <h3>Prerequisites</h3>
     <ul>
-        <li>An <strong>OpenAI API Key</strong> with access to the <em>Generative Language API</em>.</li>
+        <li>An <strong>Google Gemini API Key</strong> with access to the <em>Generative Language API</em>.</li>
     </ul>
 
   <h3>Steps to Use</h3>
@@ -46,7 +46,7 @@ index.html  # The main HTML file containing the chatbot
     <ul>
         <li><strong>Frontend</strong>: HTML, CSS, React.Js</li>
         <li><strong>BackEnd</strong>: Flask, AWS </li>
-        <li><strong>API</strong>: OpenAI API</li>
+        <li><strong>API</strong>: Google Gemini API</li>
     </ul>
 
   <h2>License</h2>
