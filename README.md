@@ -44,7 +44,8 @@ index.html  # The main HTML file containing the chatbot
 
   <h2>Technologies Used</h2>
     <ul>
-        <li><strong>Frontend</strong>: HTML, CSS, Vanilla JavaScript</li>
+        <li><strong>Frontend</strong>: HTML, CSS, React.Js</li>
+        <li><strong>BackEnd</strong>: Flask, AWS</li>
         <li><strong>API</strong>: Google Gemini Generative Language API</li>
     </ul>
 
