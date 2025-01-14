@@ -1,34 +1,79 @@
-from flask import Flask, request, jsonify
 import boto3
-from botocore.exceptions import ClientError
 import os
-
-app = Flask(__name__)
+from botocore.exceptions import ClientError
 
 # AWS S3 Configuration
-BUCKET_NAME = "your-s3-bucket-name"  # Replace with your bucket name
-s3_client = boto3.client("s3")
+bucket_name = 'records-images'
+file_path = r"C:\Users\omnat\OneDrive - University of Waterloo\sample_insurance.pdf"
 
-@app.route('/api/upload', methods=['POST'])
-def upload_file():
-    """Handle file uploads and send them to AWS S3."""
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file provided'}), 400
+# Initialize S3 client with credentials
+# Option 1: Using environment variables
+s3_client = boto3.client('s3')
 
-    file = request.files['file']  # Get the uploaded file
-    file_name = file.filename  # Use the original filename
+# Option 2: Explicit credentials (replace with your credentials if needed)
+# s3_client = boto3.client(
+#     's3',
+#     aws_access_key_id='YOUR_ACCESS_KEY',
+#     aws_secret_access_key='YOUR_SECRET_KEY',
+#     region_name='your-region'  # e.g., 'us-east-1'
+# )
+
+def check_bucket_exists(bucket_name):
+    """Check if the specified bucket exists and is accessible."""
+    try:
+        s3_client.head_bucket(Bucket=bucket_name)
+        return True
+    except ClientError as e:
+        error_code = int(e.response['Error']['Code'])
+        if error_code == 403:
+            print(f"Bucket {bucket_name} exists but you don't have permission to access it")
+        elif error_code == 404:
+            print(f"Bucket {bucket_name} does not exist")
+        return False
+
+def upload_file(file_path, object_name=None):
+    """Upload a file to S3 bucket
+
+    Parameters:
+    file_path (str): Path to the file to upload
+    object_name (str): S3 object name. If not specified, file_path's basename is used
+
+    Returns:
+    str: URL of the uploaded file if successful, None otherwise
+    """
+    # Validate file exists
+    if not os.path.exists(file_path):
+        print(f"Error: File not found at {file_path}")
+        return None
+
+    # If S3 object_name not specified, use file_path's basename
+    if object_name is None:
+        object_name = os.path.basename(file_path)
+
+    # Check if bucket exists and is accessible
+    if not check_bucket_exists(bucket_name):
+        return None
 
     try:
-        # Upload the file to S3
-        s3_client.upload_fileobj(file, BUCKET_NAME, file_name)
+        # Upload the file
+        s3_client.upload_file(file_path, bucket_name, object_name)
+        print(f"File {object_name} uploaded successfully to {bucket_name}")
+        
+        # Generate the URL for the uploaded file
+        url = f"https://{bucket_name}.s3.amazonaws.com/{object_name}"
+        return url
 
-        # Generate the public URL for the file
-        url = f"https://{BUCKET_NAME}.s3.amazonaws.com/{file_name}"
-        return jsonify({'url': url}), 200
     except ClientError as e:
-        return jsonify({'error': str(e)}), 500
+        print(f"Error uploading file: {e}")
+        return None
     except Exception as e:
-        return jsonify({'error': f'Unexpected error: {str(e)}'}), 500
+        print(f"Unexpected error: {e}")
+        return None
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+# Example usage
+if __name__ == "__main__":
+    result = upload_file(file_path)
+    if result:
+        print(f"File uploaded successfully. URL: {result}")
+    else:
+        print("File upload failed")
