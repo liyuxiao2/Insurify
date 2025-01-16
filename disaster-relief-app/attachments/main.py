@@ -4,19 +4,21 @@ from openai import OpenAI
 import pdfplumber
 from io import BytesIO
 from dotenv import load_dotenv
+from flask import Flask, request, jsonify
 
 
 # Load environment variables
 print("Current working directory:", os.getcwd())
 load_dotenv()
 
+app = Flask('__name__')
 
 # Get credentials from environment variables
 AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY')
 AWS_SECRET_KEY = os.getenv('AWS_SECRET_KEY')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-
+@app.route('/pdf/download', methods = ['GET'])
 def download_pdf_from_s3(bucket_name, object_key):
     """Download PDF from S3 using boto3."""
     try:
@@ -147,9 +149,4 @@ Keep your responses clear, concise, and user-friendly. Ensure your advice is act
 
 
 if __name__ == "__main__":
-    main()
-
-
-
-if __name__ == "__main__":
-    main()
+    app.run(debug=True)
